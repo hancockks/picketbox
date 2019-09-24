@@ -146,7 +146,7 @@ public class SecureIdentityLoginModule
       return new Group[] {};
    }
 
-   private static String encode(String secret)
+   protected static String encode(String secret)
       throws NoSuchPaddingException, NoSuchAlgorithmException,
       InvalidKeyException, BadPaddingException, IllegalBlockSizeException
    {
@@ -160,7 +160,7 @@ public class SecureIdentityLoginModule
       return n.toString(16);
    }
 
-   private static char[] decode(String secret)
+   protected static char[] decode(String secret)
       throws NoSuchPaddingException, NoSuchAlgorithmException,
       InvalidKeyException, BadPaddingException, IllegalBlockSizeException
    {
